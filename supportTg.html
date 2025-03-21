@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support TG</title>
+    <link rel="stylesheet" href="tourgo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <div class="exit">
+        <a href="tourgo.html"><i class='bx bx-exit'></i></a>
+    </div>
+    <div class="supportFormTg">
+        <h1><i class="fas fa-clipboard-list"></i> TG ПОДДЕРЖКА </h1>
+        <form id="SupportForm">
+            <div class="form-group">
+                <label for="phone"><i class='bx bx-phone'></i> Номер телефона:</label>
+                <input type="tel" id="phone" pattern="\+?[0-9\s\-\(\)]{7,15}" required placeholder="+7 (123) 456-7890"
+                    maxlength="15">
+            </div>
+            <div class="form-group">
+                <label for="firstName"><i class='bx bx-user'></i> Имя:</label>
+                <input type="text" id="firstName" required placeholder="Иван" maxlength="30">
+            </div>
+            <div class="form-group">
+                <label for="lastName"><i class='bx bx-user'></i> Фамилия:</label>
+                <input type="text" id="lastName" required placeholder="Иванов" maxlength="30">
+            </div>
+
+            <div class="text-form">
+                <textarea id="text" required placeholder="Напишите свою проблему или свой вопрос" maxlength="500"
+                rows="4" cols="50"></textarea>
+            </div>
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+        
+            <!-- Кнопка для получения геолокации -->
+            <button id="getLocationBtn" type="button" class="accept">Принимаю ответсвеность за то что пишу</button>
+
+            <button type="submit" class="submit-btn"><i class='bx bx-paper-plane'></i> Отправить</button>
+        </div>
+    </form>
+    </div>
+
+    <div class="icon-support">
+        <i class='bx bx-support' style='color:#f2f2f2'></i>
+        <br>
+        <i class='bx bx-user-pin' style='color:#f2f2f2'></i>
+    </div>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopupButton" class="close-btn">&times;</span>
+            <h2><i class='bx bx-check-circle'></i> Ваш запрос принят!</h2>
+            <p>Спасибо за вашу заявку. Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+    </div>
+    </div>
+    <script src="tourgo.js"></script>
+    <script src="supportTg.js"></script>
+</body>
+
+</html>
